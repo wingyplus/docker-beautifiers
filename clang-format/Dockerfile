@@ -13,6 +13,7 @@ RUN git clone --branch ${LLVM_TAG} --depth 1 https://github.com/llvm/llvm-projec
 WORKDIR /build/llvm-project
 RUN mv clang llvm/tools
 RUN mv libcxx llvm/projects
+RUN mv libcxxabi llvm/projects
 
 # Build
 WORKDIR llvm/build
